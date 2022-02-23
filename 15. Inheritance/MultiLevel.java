@@ -26,9 +26,9 @@ public class MultiLevel
 	public static void main(String[] args) {
 	   // HAS - A relationship
         C obj = new C();
-        obj.add(1,1);
-        obj.sub(1,1);
-        obj.mul(1,1);
+        obj.add(1,2);
+        obj.sub(1,3);
+        obj.mul(1,3);
 	}
 }
 
