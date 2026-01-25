@@ -34,4 +34,4 @@ class TicketCounter {
 
         System.out.println(name + " booking attempt finished.\n");
     }
-}
+} 
