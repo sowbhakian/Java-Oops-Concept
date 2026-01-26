@@ -1,5 +1,11 @@
 package j.supermethod;
 //Super Method
+//static void test() {
+//System.out.println(super.a); //  compile-time error
+//}
+//super requires an object context
+//Static methods do not have this
+//No object --> no parent reference
 
 class A{
     
