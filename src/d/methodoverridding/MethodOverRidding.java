@@ -1,5 +1,5 @@
 package d.methodoverridding;
-
+//Private method cannot be over ridden from the external calss
 class A{
     public void show(){
         System.out.println("In A Class");
