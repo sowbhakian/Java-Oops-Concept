@@ -6,7 +6,7 @@ interface MethodDefault{
     
     //can be Override
     //Any No. Default Methods
-    default void defaultMethod(){
+    default void defaultMethods(){
         System.out.println("In Default Method!");
     }
     
@@ -16,7 +16,7 @@ class DefaultImp implements MethodDefault{
     public void abc(){
         System.out.println("In MethodDefault abc");
     }
-    public void defaultMethod(){
+    public void defaultMethods(){
         System.out.println("In DefaultImp Override Method ");
     }
 }
@@ -26,6 +26,6 @@ public class DefaultMethodInterface {
         
 	   MethodDefault obj3 = new DefaultImp();
 	   obj3.abc();
-	   obj3.defaultMethod();
+	   obj3.defaultMethods();
     }
 }

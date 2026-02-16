@@ -5,6 +5,10 @@ package q.abstractclass;
 // Integer extends Number
 // No use of obj in Number class, so Declared as abstract
 
+//instance variable
+//Can store state
+//Can manage lifecycle
+//Can define constructors
 
 abstract class Human{
     

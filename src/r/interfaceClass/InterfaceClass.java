@@ -4,6 +4,11 @@ package r.interfaceClass;
 // No constructor in interface so no obj can be creted
 // Interface accepts static, abstract, Variables
 
+//implicitly public static final
+//Cannot have instance fields
+//Cannot store object state
+//All fields are constants
+
 interface Writer{
     
     // every method inside the interface is public abstract
