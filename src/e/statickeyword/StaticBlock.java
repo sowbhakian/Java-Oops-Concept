@@ -2,14 +2,14 @@ package e.statickeyword;
 // Static - KeyWord
 
 // Static variables are stored at CLASS LOADER MEMORY not in Heap
-// No obj required instead class name can be used
+// No object required instead class name can be used
 // static data members value is common thought the class
 // eg - one place changes every place changed
 // Static method can use only Static data member 
 
 // static - block
-// initilized only once at the load of cls loader
-// runs when the cls id loaded
+// initilized only once at the load of class loader
+// runs when the class id loaded
 
 
 public class StaticBlock{

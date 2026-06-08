@@ -20,7 +20,7 @@ public class ExceptionsSample {
 	    }
 	}
 	
-    // From here it throwa Exception to function Call
+    // From here it throws Exception to function Call
 	public static void ExceptionMethod() throws Exception{
 	    int k = 1/0;
 	}

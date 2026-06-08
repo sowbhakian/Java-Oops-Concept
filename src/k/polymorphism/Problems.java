@@ -2,6 +2,15 @@ package k.polymorphism;
 
 //Methods are polymorphic. Fields are not.
 
+/*
+ * Golden Rule
+ * 	Field access depends on the reference type.
+ * 	Method calls depend on the actual object type.
+ * 
+ * This is why Java developers generally avoid declaring a field in a subclass with the 
+ * same name as a field in the parent class—it causes field hiding, which is often confusing.
+ * 
+*/
 public class Problems {
 
 	public static void main(String[] args) {

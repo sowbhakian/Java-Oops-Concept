@@ -4,17 +4,15 @@ package h.anonymousclass;
 //Localize behavior close to usage
 //Enable inline polymorphism
 //Custom behavior
-//No need to pollute codebase with tiny classes
-//Logic is small
-//Logic is used once
+//No need to pollute code-base with tiny classes
+//Logic is small / used once
 //You need polymorphism
 //You want behavior close to usage
 //You need to override multiple methods
 //OuterClass$1.class, Has its own bytecode, Has synthetic name
 
-//Anonymous classes exist to enable localized, one-time polymorphic behavior without polluting the 
-//codebase with unnecessary named classes.
-
+//Anonymous classes exist to enable localized, one-time polymorphic behavior
+//You can override a class without creating a new class
 class A{
     public void show(){
         System.out.println("In Show");
@@ -31,6 +29,7 @@ class B extends A{
 public class AnonymousClass
 {
 	public static void main(String[] args) {
+		
 
         // WithOut AnonymousClass - OverRidding Method Show
         A obj = new B();

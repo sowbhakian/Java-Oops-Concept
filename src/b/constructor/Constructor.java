@@ -1,5 +1,5 @@
 package b.constructor;
-// Heap memory obj is created ==> by new key word
+// Heap memory object is created ==> by new key word
 // Every class has a default constructor
 // Constructor will return nothing
 // Constructor will allocate number of memory required

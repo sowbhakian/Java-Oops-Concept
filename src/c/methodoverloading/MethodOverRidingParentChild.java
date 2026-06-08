@@ -2,8 +2,8 @@ package c.methodoverloading;
 
 public class MethodOverRidingParentChild {
 	public static void main(String args[]) {
-//		Parent child2 = new Child2("asd");
-//		Child1 child1 = (Child1) child2;
+		Parent child2 = new Child2("asd");
+		Child1 child = (Child1) child2;
 		
 		Parent child1 = new Child11("asd");
 		Child1 child11 = (Child1)child1;

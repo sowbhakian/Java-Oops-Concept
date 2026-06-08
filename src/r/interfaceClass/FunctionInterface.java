@@ -27,3 +27,22 @@ public abstract class FunctionInterface {
          
      }
 }
+
+
+
+
+
+//Example of Functional Interface
+
+//@FunctionalInterface
+//public interface Runnable {
+//    void run();
+//}
+
+//Thread t = new Thread(() -> {
+//	    System.out.println("Thread Running");
+//	});
+//
+//	t.start();
+	
+	

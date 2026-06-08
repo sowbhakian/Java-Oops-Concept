@@ -3,7 +3,7 @@ package q.abstractclass;
 
 // Number is abstract class 
 // Integer extends Number
-// No use of obj in Number class, so Declared as abstract
+// No use of object in Number class, so Declared as abstract
 
 //instance variable
 //Can store state
@@ -12,7 +12,7 @@ package q.abstractclass;
 
 abstract class Human{
     
-    // if a method is abs then cls should be abs!
+    // if a method is abstract then class should be abstract!
     public abstract void sound();
     
     // abstract class can define a method 
@@ -23,7 +23,7 @@ abstract class Human{
 
 class Man extends Human{ //concrete
     
-    // Declared Abs should be defined in concrete
+    // Declared abstract should be defined in concrete
     public void sound(){
         System.out.println("Sound");
     }

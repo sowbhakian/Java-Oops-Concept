@@ -1,6 +1,7 @@
 package r.interfaceClass;
 //Default Method in Interface
 //Default + FunctionInterface too accepted
+
 interface MethodDefault{
     public void abc();
     
@@ -27,5 +28,8 @@ public class DefaultMethodInterface {
 	   MethodDefault obj3 = new DefaultImp();
 	   obj3.abc();
 	   obj3.defaultMethods();
+	   
+
+		
     }
 }

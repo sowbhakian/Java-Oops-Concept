@@ -19,7 +19,7 @@ public class StaticVariable {
         
         StaticVariable obj2 = new StaticVariable();
 	    obj2.sum = 20;
-        obj.sumnum(2);
+        obj.sumnum(2); //1st option is used here
         System.out.println(obj2.sum);
         
         //Common to all

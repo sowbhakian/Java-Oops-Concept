@@ -8,7 +8,7 @@ package i.variablelengthargument;
 
 //Cleaner than arrays
 //Method Overload Replacement
-//Performance =  Slight cost
+//Performance <  Slight cost
 
 //Rules:
 //	Only One Varargs Parameter

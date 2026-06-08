@@ -56,6 +56,11 @@ public class InterfaceClass {
              }
          };
          obj.write();
+         
+         //Functional interface with Lambda function
+         obj = ()->{
+        	 System.out.println("In Anonymous function");
+         };
                  
      }
 
