@@ -7,6 +7,11 @@ import java.util.*;
 
 public class Boxing
 {
+	/**
+	 * Main method demonstrating boxing and unboxing.
+	 * Shows conversion between primitive types and their wrapper classes.
+	 * @param args command line arguments
+	 */
 	public static void main(String[] args) {
     
         int i = 5; // Primitive dataType

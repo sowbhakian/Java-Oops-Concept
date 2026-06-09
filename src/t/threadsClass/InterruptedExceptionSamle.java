@@ -2,6 +2,11 @@ package t.threadsClass;
 
 public class InterruptedExceptionSamle {
 
+	/**
+	 * Main method demonstrating thread interruption.
+	 * Shows how to interrupt a sleeping thread.
+	 * @param args command line arguments
+	 */
 	public static void main(String[] args) {
 		Worker t = new Worker();
 		t.start();
@@ -11,6 +16,10 @@ public class InterruptedExceptionSamle {
 }
 
 class Worker extends Thread {
+    /**
+     * The run method that can be interrupted.
+     * Demonstrates handling InterruptedException.
+     */
     public void run() {
         try {
             Thread.sleep(5000);

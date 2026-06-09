@@ -20,6 +20,11 @@ public class StaticBlock{
     }    
 
 
+    /**
+     * Main method demonstrating static block initialization.
+     * Shows that static blocks are executed when the class is loaded.
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         //Static Method Loads When the Class get Loaded
     	StaticMethod.method();

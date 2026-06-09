@@ -13,6 +13,10 @@ interface Writer{
     
     // every method inside the interface is public abstract
     // method cant be Defined only Declarated
+    /**
+     * Method to be implemented by classes that can write.
+     * This is an abstract method that must be defined by implementing classes.
+     */
     public void write();
     
     // Every Variables are Final inside Interface - that is constance
@@ -21,12 +25,20 @@ interface Writer{
 }
 
 class Pen implements Writer{
+    /**
+     * Implementation of the write method for a Pen.
+     * Demonstrates interface implementation.
+     */
     public void write(){
         System.out.println("Pen Writer");
     }
 }
 
 class Pencil implements Writer{
+    /**
+     * Implementation of the write method for a Pencil.
+     * Also demonstrates accessing interface constants.
+     */
     public void write(){
         //error
         // NUM = 99;
@@ -37,6 +49,11 @@ class Pencil implements Writer{
 
 public class InterfaceClass {
 
+    /**
+     * Main method demonstrating interface usage.
+     * Shows how interfaces define contracts that classes must implement.
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
 	    
         //Only reference of interface can be created not obj

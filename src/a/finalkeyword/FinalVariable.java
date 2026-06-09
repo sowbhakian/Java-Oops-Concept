@@ -2,7 +2,7 @@ package a.finalkeyword;
 
 import java.sql.Date;
 
-//final protects the reference, not the object’s internal state.
+//final protects the reference, not the objectï¿½s internal state.
 
 //Cant Re-Assign the value
 class ClassTest11{
@@ -13,6 +13,10 @@ class ClassTest11{
     final Date date;
     final String str;
     
+    /**
+     * Constructor that initializes final variables.
+     * Demonstrates that final variables can be assigned once in the constructor.
+     */
     ClassTest11(){
         DAY2 = 12; // Can be assigned one Time
         date = new Date(0);
@@ -24,6 +28,11 @@ class ClassTest11{
 
 public class FinalVariable
 {
+	/**
+	 * Main method demonstrating the use of final variables.
+	 * Shows that final variables cannot be reassigned after initialization.
+	 * @param args command line arguments
+	 */
 	public static void main(String args[]) {
         
 		ClassTest11 obj = new ClassTest11();

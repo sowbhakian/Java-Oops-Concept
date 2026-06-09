@@ -4,6 +4,11 @@ import java.util.concurrent.*;
 
 public final class ProducerConsumerBlockingQueue {
 
+	/**
+	 * Main method demonstrating producer-consumer pattern using BlockingQueue.
+	 * Shows how BlockingQueue simplifies thread synchronization.
+	 * @param args command line arguments
+	 */
 	public static void main(String[] args) {
 
 		ArrayBlockingQueue<Integer> queue = new ArrayBlockingQueue<>(1);
@@ -15,6 +20,9 @@ public final class ProducerConsumerBlockingQueue {
 
 	}
 
+	/**
+	 * Demonstrates basic BlockingQueue operations and generic wildcards.
+	 */
 	private static void basicObjectLearning() {
 		// Object referencing
 		BlockingQueue<Integer> q1 = new ArrayBlockingQueue<Integer>(10);
@@ -51,11 +59,19 @@ public final class ProducerConsumerBlockingQueue {
 class QueueProducer implements Runnable {
 	ArrayBlockingQueue<Integer> queue;
 	Boolean isConsumed ;
+	/**
+	 * Constructor for QueueProducer.
+	 * @param queue the queue to produce items into
+	 * @param isConsumed flag indicating if items are consumed
+	 */
 	public QueueProducer(ArrayBlockingQueue<Integer> queue,Boolean isConsumed ) {
 		this.queue = queue;
 		this.isConsumed = isConsumed;
 	}
 
+	/**
+	 * Produces items into the blocking queue.
+	 */
 	public synchronized void run() {
 		for (int i = 1; i <= 5; i++) {
 			// System.out.println("inside QueueProducer" +i);
@@ -81,11 +97,19 @@ class QueueConsumer extends Thread {
 	BlockingQueue<Integer> queue;
 	Boolean isConsumed ;
 	
+	/**
+	 * Constructor for QueueConsumer.
+	 * @param queue the queue to consume items from
+	 * @param isConsumed flag indicating if items are consumed
+	 */
 	public QueueConsumer(ArrayBlockingQueue<Integer> queue,Boolean isConsumed ) {
 		this.queue = queue;
 		this.isConsumed = isConsumed;
 	}
 
+	/**
+	 * Consumes items from the blocking queue.
+	 */
 	public synchronized void run() {
 		for (int i = 1; i <= 5; i++) {
 			 System.out.println("inside QueueConsumer" +i + " isConsumed " + isConsumed);

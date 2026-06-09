@@ -2,6 +2,11 @@ package t.threadsClass;
 
 public class ProducerConsumer {
 
+	/**
+	 * Main method demonstrating producer-consumer pattern.
+	 * Shows custom implementation with wait/notify.
+	 * @param args command line arguments
+	 */
 	public static void main(String[] args) {
 		Queue q = new Queue();
 		new Thread(new Produce(q)).start();
@@ -15,6 +20,10 @@ class Queue {
 	int things = 1;
 	Boolean isConsumed = true;
 
+	/**
+	 * Produces an item and notifies consumers.
+	 * Uses wait/notify for synchronization.
+	 */
 	public void produce() {
 //		System.out.println("isConsumed : produce " + isConsumed);
 		try {
@@ -29,6 +38,11 @@ class Queue {
 		}
 	}
 
+	/**
+	 * Consumes an item and notifies producers.
+	 * Uses wait/notify for synchronization.
+	 * @return the consumed item
+	 */
 	public  void consume() {
 //		System.out.println("isConsumed : consume " + isConsumed);
 		try {
@@ -46,6 +60,10 @@ class Queue {
 
 class Produce implements Runnable {
 	Queue q;
+	/**
+	 * Constructor for Produce.
+	 * @param q the queue to produce items into
+	 */
 	public Produce(Queue q) {
 		this.q = q;
 	}
@@ -63,6 +81,10 @@ class Produce implements Runnable {
 
 class Consume extends Thread {
 	Queue q;
+	/**
+	 * Constructor for Consume.
+	 * @param q the queue to consume items from
+	 */
 	public Consume(Queue q) {
 		this.q = q;
 	}

@@ -1,6 +1,11 @@
 package t.threadsClass;
 
 public class Synchronize {
+    /**
+     * Main method demonstrating thread synchronization.
+     * Shows how synchronized blocks prevent race conditions.
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         TicketCounter counter = new TicketCounter();
 
@@ -20,6 +25,12 @@ class TicketCounter {
     private int availableTickets = 5;
     private final Object lock = new Object();
 
+    /**
+     * Books tickets for a customer.
+     * Uses synchronized block to ensure thread-safe ticket booking.
+     * @param name the customer's name
+     * @param ticketsRequested the number of tickets requested
+     */
     public void bookTicket(String name, int ticketsRequested) {
         System.out.println(name + " is trying to book...");
 

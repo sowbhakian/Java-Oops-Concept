@@ -1,6 +1,11 @@
 package s.exceptionsClass;
 public class ExceptionsSample {
     
+	/**
+	 * Main method demonstrating exception handling.
+	 * Shows the use of try-catch-finally blocks and exception propagation.
+	 * @param args command line arguments
+	 */
 	public static void main(String[] args) {
 	    try{
 	        int i=1;
@@ -21,6 +26,11 @@ public class ExceptionsSample {
 	}
 	
     // From here it throws Exception to function Call
+	/**
+	 * A method that throws an exception.
+	 * Demonstrates exception propagation using the throws keyword.
+	 * @throws Exception if division by zero occurs
+	 */
 	public static void ExceptionMethod() throws Exception{
 	    int k = 1/0;
 	}

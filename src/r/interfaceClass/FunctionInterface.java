@@ -16,10 +16,18 @@ interface FunctionInterfaces{
 //}
 
 public abstract class FunctionInterface {
+    /**
+     * Main method demonstrating functional interfaces and lambda expressions.
+     * Shows how functional interfaces enable lambda expressions in Java.
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
 
          //Function Interface  Lambda Expression
-         FunctionInterfaces obj2 = ()-> System.out.println("Lambda Expression");
+         FunctionInterfaces obj2 = ()-> {
+        	 System.out.println("Lambda Expression1");
+        	 System.out.println("Lambda Expression2");
+         };
          obj2.function();
          
          //For an Abstract we cannot create the Lambda Expression

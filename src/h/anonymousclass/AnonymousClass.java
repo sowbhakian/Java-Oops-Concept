@@ -14,12 +14,20 @@ package h.anonymousclass;
 //Anonymous classes exist to enable localized, one-time polymorphic behavior
 //You can override a class without creating a new class
 class A{
+    /**
+     * Displays a simple message.
+     * This method will be overridden in subclasses and anonymous classes.
+     */
     public void show(){
         System.out.println("In Show");
     }
 }
 
 class B extends A{
+    /**
+     * Overrides the show method from class A.
+     * Demonstrates standard method overriding without anonymous classes.
+     */
     public void show(){
         System.out.println("WithOut AnonymousClass");
     }
@@ -28,6 +36,11 @@ class B extends A{
 
 public class AnonymousClass
 {
+	/**
+	 * Main method demonstrating anonymous classes.
+	 * Shows how to override methods without creating named subclasses.
+	 * @param args command line arguments
+	 */
 	public static void main(String[] args) {
 		
 

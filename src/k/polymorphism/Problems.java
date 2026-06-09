@@ -13,6 +13,11 @@ package k.polymorphism;
 */
 public class Problems {
 
+	/**
+	 * Main method demonstrating field hiding in inheritance.
+	 * Shows the difference between field access and method polymorphism.
+	 * @param args command line arguments
+	 */
 	public static void main(String[] args) {
 
 		AAA a = new AAA();

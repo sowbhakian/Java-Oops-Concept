@@ -22,6 +22,12 @@ package i.variablelengthargument;
 
 class SampleClass{
     
+    /**
+     * Calculates the sum of a variable number of integer arguments.
+     * Demonstrates the use of varargs (variable-length arguments).
+     * @param array variable number of integer arguments
+     * @return the sum of all arguments
+     */
     public static int method(int ... array){ // Occours as array 
         int sum=0;
         for(int ie : array){
@@ -33,6 +39,11 @@ class SampleClass{
 
 public class Varags
 {
+	/**
+	 * Main method demonstrating variable-length arguments (varargs).
+	 * Shows how a method can accept any number of arguments of the same type.
+	 * @param args command line arguments
+	 */
 	public static void main(String[] args) {
 
         System.out.println(SampleClass.method(1,1,1,1));

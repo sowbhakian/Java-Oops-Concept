@@ -5,6 +5,11 @@ import java.util.concurrent.*;
 
 public class MultiThreading {
 
+	/**
+	 * Main method demonstrating different ways to create threads.
+	 * Shows both Thread extension and Runnable implementation.
+	 * @param args command line arguments
+	 */
 	public static void main(String[] args) {
 		System.out.println("Multi-Threading");
 
@@ -20,6 +25,10 @@ public class MultiThreading {
 // Example:1:run
 //Thread  implements Runnable 
 class MyThread extends Thread {
+	/**
+	 * The run method executed when the thread starts.
+	 * Demonstrates extending Thread class.
+	 */
 	public void run() {
 		System.out.println("Thread is running");
 	}
@@ -27,6 +36,10 @@ class MyThread extends Thread {
 
 // Example:2:
 class MyRunnable implements Runnable {
+	/**
+	 * The run method executed when the thread starts.
+	 * Demonstrates implementing Runnable interface.
+	 */
 	public void run() {
 		System.out.println("Runnable thread is running");
 	}

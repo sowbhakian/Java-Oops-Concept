@@ -1,5 +1,10 @@
 package t.threadsClass;
 public class DaemonDemo {
+    /**
+     * Main method demonstrating daemon threads.
+     * Shows the difference between user threads and daemon threads.
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         Thread userThread = new Thread(() -> {
             System.out.println("User thread running...");
