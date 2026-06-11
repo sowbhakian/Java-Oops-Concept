@@ -15,11 +15,11 @@ public class AThreadCreation {
 
 		//Thread Class
 		MyThread t1 = new MyThread();
-		t1.start(); // starts the thread
+//		t1.start(); // starts the thread
 
 		//Runnable Interface
 		Thread t2 = new Thread(new MyRunnable());
-		t2.start();
+//		t2.start();
 		
 		//Anonymous Thread class
 		Thread t3 = new Thread() {
@@ -33,6 +33,22 @@ public class AThreadCreation {
 			System.out.println("Lamda Thread");
 		});
 		
+		createThreadViaThreadPool();
+	}
+
+	private static void createThreadViaThreadPool() {
+	
+		try {
+			ExecutorService exeService = Executors.newFixedThreadPool(10);
+			for(int i=0;i<10;i++) {
+				exeService.submit(()->{ //Runnable Interface to be created
+					System.out.println("Thread Name : " + Thread.currentThread());
+				});
+			}
+
+		} catch (Exception e) {
+
+		}
 	}
 
 }

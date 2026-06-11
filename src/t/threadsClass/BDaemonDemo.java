@@ -7,9 +7,11 @@ public class BDaemonDemo {
      */
     public static void main(String[] args) {
         Thread userThread = new Thread(() -> {
-            System.out.println("User thread running...");
-            try { Thread.sleep(1000); } catch (InterruptedException e) {}
-            System.out.println("User thread finished.");
+        	for(int i=0;i<5;i++) {
+	            System.out.println("User thread running...");
+	            try { Thread.sleep(1000); } catch (InterruptedException e) {}
+	            System.out.println("User thread finished.");
+        	}
         });
 
         Thread daemonThread = new Thread(() -> {
