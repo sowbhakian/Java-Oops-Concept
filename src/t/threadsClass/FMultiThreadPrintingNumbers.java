@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class MultiThreadPrintingNumbers {
+public class FMultiThreadPrintingNumbers {
 
 	/**
 	 * Main method demonstrating multi-threaded printing with synchronization.

@@ -2,7 +2,7 @@ package t.threadsClass;
 
 import java.util.concurrent.*;
 
-public final class ProducerConsumerBlockingQueue {
+public final class JProducerConsumerBlockingQueue {
 
 	/**
 	 * Main method demonstrating producer-consumer pattern using BlockingQueue.

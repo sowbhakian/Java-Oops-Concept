@@ -1,6 +1,6 @@
 package t.threadsClass;
 
-public class Synchronize {
+public class ESynchronize {
     /**
      * Main method demonstrating thread synchronization.
      * Shows how synchronized blocks prevent race conditions.

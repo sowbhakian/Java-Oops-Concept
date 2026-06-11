@@ -3,7 +3,7 @@ package t.threadsClass;
 import java.util.*;
 import java.util.concurrent.*;
 
-public class MultiThreading {
+public class AThreadCreation {
 
 	/**
 	 * Main method demonstrating different ways to create threads.
@@ -13,11 +13,26 @@ public class MultiThreading {
 	public static void main(String[] args) {
 		System.out.println("Multi-Threading");
 
-		MyThread example1 = new MyThread();
-		example1.start(); // starts the thread
+		//Thread Class
+		MyThread t1 = new MyThread();
+		t1.start(); // starts the thread
 
-		Thread example2 = new Thread(new MyRunnable());
-		example2.start();
+		//Runnable Interface
+		Thread t2 = new Thread(new MyRunnable());
+		t2.start();
+		
+		//Anonymous Thread class
+		Thread t3 = new Thread() {
+			public void run() {
+				System.out.println("Anonymous Thread Class");
+			}
+		};
+		
+		//Lambda Thread
+		Thread t4 = new Thread(()->{
+			System.out.println("Lamda Thread");
+		});
+		
 	}
 
 }
@@ -30,7 +45,7 @@ class MyThread extends Thread {
 	 * Demonstrates extending Thread class.
 	 */
 	public void run() {
-		System.out.println("Thread is running");
+		System.out.println("Thread Class");
 	}
 }
 
@@ -41,6 +56,6 @@ class MyRunnable implements Runnable {
 	 * Demonstrates implementing Runnable interface.
 	 */
 	public void run() {
-		System.out.println("Runnable thread is running");
+		System.out.println("Runnable Interface");
 	}
 }

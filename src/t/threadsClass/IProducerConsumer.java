@@ -1,6 +1,6 @@
 package t.threadsClass;
 
-public class ProducerConsumer {
+public class IProducerConsumer {
 
 	/**
 	 * Main method demonstrating producer-consumer pattern.

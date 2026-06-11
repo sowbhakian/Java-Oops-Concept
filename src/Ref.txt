@@ -1,0 +1,7 @@
+Thread:
+------
+1. Create Thread using Thread Class
+2. Create Thread using Runnable Interface
+3. Create Thread using Anonymous Thread class
+4. Create Thread using Lambda Thread
+5. Create User Thread and Demon Thread and print it

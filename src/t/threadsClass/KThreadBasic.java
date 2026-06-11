@@ -1,6 +1,6 @@
 package t.threadsClass;
 
-public class ThreadBasic {
+public class KThreadBasic {
     /**
      * Main method demonstrating basic thread communication using wait and notify.
      * Shows producer-consumer pattern with synchronized methods.

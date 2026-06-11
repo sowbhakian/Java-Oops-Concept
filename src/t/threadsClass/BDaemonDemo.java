@@ -1,5 +1,5 @@
 package t.threadsClass;
-public class DaemonDemo {
+public class BDaemonDemo {
     /**
      * Main method demonstrating daemon threads.
      * Shows the difference between user threads and daemon threads.

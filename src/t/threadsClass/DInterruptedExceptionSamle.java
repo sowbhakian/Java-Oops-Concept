@@ -1,6 +1,6 @@
 package t.threadsClass;
 
-public class InterruptedExceptionSamle {
+public class DInterruptedExceptionSamle {
 
 	/**
 	 * Main method demonstrating thread interruption.
