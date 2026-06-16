@@ -3,6 +3,8 @@ package t.threadsClass;
 //https://www.youtube.com/watch?v=FpNRXz696ZY
 
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class ESynchronize {
 	/**
@@ -21,10 +23,7 @@ public class ESynchronize {
 		Counter counter = new Counter();
 		
 		for (int i = 0; i < THREAD_COUNT; i++) {
-
-			//submit() is async, we need to shutdown mannualy
-			executor.submit(new Runnable() {
-				
+			executor.submit(new Runnable() {				
 				//You are NOT directly creating an interface object
 				//You are creating an object of an anonymous class that implements the interface
 				public void run() {
@@ -49,20 +48,23 @@ public class ESynchronize {
 
 class Counter{
 	
+	//If the method used the same shared resource, then we need to use the same lock, not the different locks
 	private final Object Object = new Object();
 	int count = 0;
+	
+	AtomicInteger counterB = new AtomicInteger(); // Atomic Interger is thread safty, or else sync to be used
 	
 	public int getCurrentCount() {
 		return this.count;
 	}
 	
-	//synchronized  Method
+	//1. synchronized  Method
 	public synchronized void incrementCounter() {
 		this.count++;
 	}
 	
 	
-	//synchronized Block
+	//2. synchronized Block
 	public void incrementCounter(String dummyParam) {
 		
 		//some logic of code
@@ -78,7 +80,7 @@ class Counter{
 	}
 	
 	
-	//synchronized Block --> this is best practice 
+	//3. synchronized Block --> this is best practice 
 	public void incrementCounter(int dummyParam) {
 		
 		//some logic of code
@@ -88,6 +90,20 @@ class Counter{
 		synchronized (Object) {			
 			this.count++;
 		}
+		
+		//some logic of code
+		
+	}
+	
+	//4. you can use atomic variable which is thread safty
+	
+	ReentrantLock lock = new ReentrantLock();
+	//5.
+	public void incrementCounter(float dummyParam) {
+		
+		//some logic of code
+		lock.lock();
+		
 		
 		//some logic of code
 		

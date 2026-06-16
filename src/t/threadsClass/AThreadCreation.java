@@ -21,15 +21,21 @@ public class AThreadCreation {
 		Thread t2 = new Thread(new MyRunnable());
 //		t2.start();
 		
-		//Anonymous Thread class
+		//Anonymous Thread class - both Thread and Runnable can be used
 		Thread t3 = new Thread() {
 			public void run() {
 				System.out.println("Anonymous Thread Class");
 			}
 		};
 		
-		//Lambda Thread
-		Thread t4 = new Thread(()->{
+		Runnable t4 = new Runnable() {
+			public void run() {
+				System.out.println("Anonymous Thread Class");
+			}
+		};
+		
+		//Lambda Thread - Only Thread can be used for the lambda use case
+		Thread t5 = new Thread(()->{
 			System.out.println("Lamda Thread");
 		});
 		
@@ -41,10 +47,19 @@ public class AThreadCreation {
 		try {
 			ExecutorService exeService = Executors.newFixedThreadPool(10);
 			for(int i=0;i<10;i++) {
+				//submit() is async, we need to shutdown mannualy
 				exeService.submit(()->{ //Runnable Interface to be created
 					System.out.println("Thread Name : " + Thread.currentThread());
 				});
 			}
+			
+			//shutdown()Graceful – let tasks finish
+			//shutdownNow()Forceful – interrupts tasks immediately
+			
+			exeService.shutdown();
+			//Requires shutdown before using the awaitTermination, if the shutdown is not used then the JVM will be alive
+			//this is kind of Thread.join() but waits for all thread to complete
+			exeService.awaitTermination(10, TimeUnit.SECONDS);
 
 		} catch (Exception e) {
 

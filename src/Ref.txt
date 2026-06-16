@@ -1,9 +1,9 @@
 Thread:
 ------
-1. Create Thread using Thread Class
-2. Create Thread using Runnable Interface
-3. Create Thread & Execute via ThreadPool
-3. Create Thread using Anonymous Thread class
-4. Create Thread using Lambda Thread
-5. Create Counter class by using 2 Threads (Sync Class & Sync Method)
-6.  
+1. Create Thread using Thread Class							--
+2. Create Thread using Runnable Interface					--
+3. Create Thread & Execute via ThreadPool					--
+3. Create Thread using Anonymous Thread class				--
+4. Create Thread using Lambda Thread						--
+5. Create Counter class by using 2 Threads (Sync Class,  Sync Method, Atomic, ReentrantLock)
+6. Create Producer and Consumer(wait, notify, notifyAll)	--
