@@ -141,7 +141,12 @@ public class StreamAndFilter {
 		List<Integer> descending = numbers.stream()
 			.sorted(Comparator.reverseOrder())
 			.collect(Collectors.toList());
-		
+
+		// Using Comparator lambda function
+		 descending = numbers.stream()
+					.sorted((a,b)->a-b)
+					.collect(Collectors.toList());
+		 
 		System.out.println("Original: " + numbers);
 		System.out.println("Ascending: " + ascending);
 		System.out.println("Descending: " + descending);
@@ -270,7 +275,7 @@ public class StreamAndFilter {
 		System.out.println("--- REDUCE Example ---");
 		List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 		
-		// Sum all numbers
+		// Sum all numbers, first param as 0, the base number to be added with the list
 		int sum = numbers.stream()
 			.reduce(0, (a, b) -> a + b);
 		

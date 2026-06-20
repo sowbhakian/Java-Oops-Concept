@@ -1,3 +1,30 @@
+Stream & Filters:
+-----------------
+1. stream()
+2. filter(n -> n % 2 == 0)
+3. collect(Collectors.toList())
+4. map(String::toUpperCase)
+5. flatMap(list -> list.stream())
+6. sorted(Comparator.reverseOrder())
+7. distinct()
+8. limit(5)
+9. skip(3)
+10. anyMatch(n -> n % 2 == 0)
+11. allMatch(n -> n > 0)
+12. noneMatch(n -> n < 0)
+13. Optional<Integer> firstEven
+	firstEven.isPresent() ? firstEven.get() : "None"
+14. reduce(0, (a, b) -> a + b)
+15. collect(Collectors.toList())
+	collect(Collectors.toSet())
+	collect(Collectors.toMap(n -> n, n -> "Value_" + n))
+	collect(Collectors.groupingBy(String::length)) //Grouping
+16. count()
+
+	
+
+
+
 Thread:
 ------
 1. Create Thread using Thread Class							--
